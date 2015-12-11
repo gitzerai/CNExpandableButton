@@ -337,12 +337,10 @@
 		{
 			if (i != selectedItem)
 			{
-				if ([v isKindOfClass:[DDExpandableButtonCustomUILabel class]])
-				{
+				if ([v isKindOfClass:[DDExpandableButtonCustomUILabel class]]) {
 					[(DDExpandableButtonCustomUILabel *)v setFont:((unSelectedLabelFont != nil)?unSelectedLabelFont:labelFont)];
 				}
-				if ([v respondsToSelector:@selector(setHighlighted:)])
-				{
+				if ([v respondsToSelector:@selector(setHighlighted:)]) {
 					[v setHighlighted:NO];
 				}
 			}
@@ -350,7 +348,9 @@
 				if ([v respondsToSelector:@selector(setHighlighted:)]) {
 				  [v setHighlighted:YES];
 				}
-				[v setTextColor:self.selectedTextColor];
+				if ([v isKindOfClass:[DDExpandableButtonCustomUILabel class]]) {
+					[(DDExpandableButtonCustomUILabel *)v setTextColor:self.selectedTextColor];
+				}
 			}
 
 			CGRect labelRect = CGRectMake(x, 0, [v defaultFrameSize].width + horizontalPadding * 2, maxHeight);
@@ -391,7 +391,7 @@
 
 			CGRect r = CGRectZero;
 			r.size.height = maxHeight;
-			if (i < selectedItem || self.shouldShowLabelWhenExpanded)
+			if (i < selectedItem || !self.shouldShowLabelWhenExpanded)
 			{
 				r.origin.x = leftWidth;
 				v.alpha = 0;
