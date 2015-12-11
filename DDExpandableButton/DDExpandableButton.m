@@ -98,6 +98,7 @@
 @synthesize useAnimation;
 @synthesize borderColor;
 @synthesize textColor;
+@synthesize selectedTextColor;
 @synthesize labelFont;
 @synthesize unSelectedLabelFont;
 @synthesize timeout;
@@ -147,6 +148,7 @@
 
 		self.borderColor = [UIColor colorWithWhite:DEFAULT_BORDER_WHITE alpha:DEFAULT_BORDER_ALPHA];
 		self.textColor = borderColor;
+		self.selectedTextColor = borderColor;
 		self.labelFont = DEFAULT_FONT;
 		self.unSelectedLabelFont = DEFAULT_UNSELECTED_FONT;
 
@@ -343,9 +345,11 @@
 					[v setHighlighted:NO];
 				}
 			}
-			else if ([v respondsToSelector:@selector(setHighlighted:)])
-			{
-				[v setHighlighted:YES];
+			else {
+				if ([v respondsToSelector:@selector(setHighlighted:)]) {
+				  [v setHighlighted:YES];
+				}
+				[v setTextColor:self.selectedTextColor];
 			}
 
 			CGRect labelRect = CGRectMake(x, 0, [v defaultFrameSize].width + horizontalPadding * 2, maxHeight);

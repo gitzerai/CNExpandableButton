@@ -82,6 +82,11 @@
 @property (nonatomic,retain)	UIColor		*textColor;
 
 /**
+ Color of selected text labels.
+ */
+@property (nonatomic,retain)	UIColor		*selectedTextColor;
+
+/**
  Font of text labels.
  */
 @property (nonatomic,retain)	UIFont		*labelFont;
