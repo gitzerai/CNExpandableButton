@@ -99,7 +99,7 @@
 /**
  Show label in case the button is not expanded, defaults to YES
  */
-@property (nonatomic,retain)	BOOL		*shouldShowLabelWhenExpanded;
+@property (nonatomic,assign)	BOOL		*shouldShowLabelWhenExpanded;
 
 /**
  Access UIView used to draw labels.
