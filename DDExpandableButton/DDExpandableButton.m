@@ -54,7 +54,7 @@
 
 - (CGSize)defaultFrameSize
 {
-	return [self.text sizeWithFont:self.font];
+	return [self.text sizeWithAttributes:@{NSFontAttributeName: self.font}];
 }
 
 @end
