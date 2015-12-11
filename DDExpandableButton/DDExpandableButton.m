@@ -391,7 +391,12 @@
 
 			CGRect r = CGRectZero;
 			r.size.height = maxHeight;
-			if (i < selectedItem || !self.shouldShowLabelWhenExpanded)
+			if (!self.shouldShowLabelWhenExpanded) {
+        r.size.width = [v defaultFrameSize].width;
+        r.origin.x = leftWidth;
+        v.alpha = 0;
+      }
+			else if (i < selectedItem)
 			{
 				r.origin.x = leftWidth;
 				v.alpha = 0;
