@@ -252,8 +252,6 @@
 	self.layer.borderWidth	= borderWidth;
 	self.layer.borderColor	= borderColor.CGColor;
 	self.layer.cornerRadius = round(maxHeight / 2.0f);
-
-	[self setSelectedItem:0 animated:NO];
 }
 
 
