@@ -97,6 +97,11 @@
 @property (nonatomic,retain)	UIFont		*unSelectedLabelFont;
 
 /**
+ Show label in case the button is not expanded, defaults to YES
+ */
+@property (nonatomic,retain)	BOOL		*shouldShowLabelWhenExpanded;
+
+/**
  Access UIView used to draw labels.
  */
 @property (nonatomic,readonly)	NSArray		*labels;

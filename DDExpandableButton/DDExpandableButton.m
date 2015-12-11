@@ -107,7 +107,7 @@
 @synthesize borderWidth;
 @synthesize innerBorderWidth;
 @synthesize labels;
-
+@synthesize shouldShowLabelWhenExpanded;
 
 #pragma mark Default Values
 
@@ -143,6 +143,7 @@
 		horizontalPadding = DEFAULT_HORI_PADDING;
 		verticalPadding = DEFAULT_VERT_PADDING;
 		timeout = DEFAULT_TIMEOUT;
+		shouldShowLabelWhenExpanded = YES;
 
 		[self addTarget:self action:@selector(chooseLabel:forEvent:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -390,7 +391,7 @@
 
 			CGRect r = CGRectZero;
 			r.size.height = maxHeight;
-			if (i < selectedItem)
+			if (i < selectedItem || self.shouldShowLabelWhenExpanded)
 			{
 				r.origin.x = leftWidth;
 				v.alpha = 0;
