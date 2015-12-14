@@ -11,6 +11,12 @@ Purpose
 
 ![button samples](http://github.com/ddebin/DDExpandableButton/raw/master/README.png)
 
+*Forked from https://github.com/smartapps-fr/DDExpandableButton adding following features:*
+
+- possibility of showing the toggle icon without a label
+- left label padding
+- possibility of changing color of the selected item
+- getting rid of iOS7 deprecated warning
 
 Properties
 --------------
