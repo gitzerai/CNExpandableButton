@@ -92,6 +92,11 @@
 @property (nonatomic,retain)	UIFont		*labelFont;
 
 /**
+ Left label padding.
+ */
+@property (nonatomic,assign)	CGFloat		leftPadding;
+
+/**
  Font of unselected text labels. Nil if not different from labelFont.
  */
 @property (nonatomic,retain)	UIFont		*unSelectedLabelFont;

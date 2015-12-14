@@ -108,6 +108,7 @@
 @synthesize innerBorderWidth;
 @synthesize labels;
 @synthesize shouldShowLabelWhenExpanded;
+@synthesize leftPadding;
 
 #pragma mark Default Values
 
@@ -125,7 +126,7 @@
 #define DEFAULT_BKG_ALPHA		0.4f
 #define DEFAULT_FONT			[UIFont boldSystemFontOfSize:14.0f]
 #define DEFAULT_UNSELECTED_FONT nil
-
+#define DEFAULT_LEFT_PADDING 0.0f
 
 #pragma mark - Init Methods
 
@@ -143,6 +144,7 @@
 		horizontalPadding = DEFAULT_HORI_PADDING;
 		verticalPadding = DEFAULT_VERT_PADDING;
 		timeout = DEFAULT_TIMEOUT;
+		leftPadding = DEFAULT_LEFT_PADDING;
 		shouldShowLabelWhenExpanded = YES;
 
 		[self addTarget:self action:@selector(chooseLabel:forEvent:) forControlEvents:UIControlEventTouchUpInside];
@@ -353,7 +355,7 @@
 				}
 			}
 
-			CGRect labelRect = CGRectMake(x, 0, [v defaultFrameSize].width + horizontalPadding * 2, maxHeight);
+			CGRect labelRect = CGRectMake(x + leftPadding, 0, [v defaultFrameSize].width + horizontalPadding * 2, maxHeight);
 			x += labelRect.size.width - v.layer.borderWidth;
 			v.frame = labelRect;
 			v.alpha = 1;
