@@ -1,6 +1,6 @@
 //
 //  SampleAppDelegate.h
-//  DDExpandableButtonSample
+//  CNExpandableButtonSample
 //
 
 #import <UIKit/UIKit.h>

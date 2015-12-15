@@ -1,6 +1,6 @@
 //
-//	DDExpandableButton.h
-//	https://github.com/ddebin/DDExpandableButton
+//	CNExpandableButton.h
+//	https://github.com/gitzerai/CNExpandableButton
 //
 
 #ifndef __IPHONE_5_0
@@ -10,14 +10,14 @@
 #import <UIKit/UIKit.h>
 
 
-#define DDView UIView <DDExpandableButtonViewSource>
+#define DDView UIView <CNExpandableButtonViewSource>
 
-@protocol DDExpandableButtonViewSource;
+@protocol CNExpandableButtonViewSource;
 
 /**
- `DDExpandableButton` is a class designed to be used like an expandable `UIButton` ; as seen in the iOS Camera app for the "flash" button.
+ `CNExpandableButton` is a class designed to be used like an expandable `UIButton` ; as seen in the iOS Camera app for the "flash" button.
  */
-@interface DDExpandableButton : UIControl
+@interface CNExpandableButton : UIControl
 {
 	CGFloat		cornerAdditionalPadding;
 	CGFloat		leftWidth;
@@ -112,11 +112,11 @@
 @property (nonatomic,readonly)	NSArray		*labels;
 
 /**
- Creates and returns a `DDExpandableButton` with specific point / left title / buttons
- @param point Upper-left corner for `DDExpandableButton` frame
+ Creates and returns a `CNExpandableButton` with specific point / left title / buttons
+ @param point Upper-left corner for `CNExpandableButton` frame
  @param leftTitle Left title in button
  @param buttons An array of `NSString`/`UIImage`/`UIView` objects
- @return A `DDExpandableButton`
+ @return A `CNExpandableButton`
  */
 - (id)initWithPoint:(CGPoint)point leftTitle:(id)leftTitle buttons:(NSArray *)buttons;
 
@@ -159,9 +159,9 @@
 @end
 
 /**
- All `UIView` used by DDExpandableButton must conform to this protocol
+ All `UIView` used by CNExpandableButton must conform to this protocol
  */
-@protocol DDExpandableButtonViewSource <NSObject>
+@protocol CNExpandableButtonViewSource <NSObject>
 
 /**
  Return default frame size

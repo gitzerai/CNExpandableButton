@@ -1,10 +1,10 @@
 //
-//	DDExpandableButtonSampleViewController.m
-//	DDExpandableButtonSample
+//	CNExpandableButtonSampleViewController.m
+//	CNExpandableButtonSample
 //
 
 #import "SampleViewController.h"
-#import "DDExpandableButton.h"
+#import "CNExpandableButton.h"
 
 @implementation SampleViewController
 
@@ -28,7 +28,7 @@
 {
 	[super viewDidLoad];
 
-	DDExpandableButton *torchModeButton = [[[DDExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 20.0f)
+	CNExpandableButton *torchModeButton = [[[CNExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 20.0f)
 																		   leftTitle:[UIImage imageNamed:@"Flash.png"]
 																			 buttons:[NSArray arrayWithObjects:@"Auto", @"On", @"Off", nil]] autorelease];
 	[[self view] addSubview:torchModeButton];
@@ -77,7 +77,7 @@
 
 	[[[self.view viewWithTag:10] layer] setBorderColor:[UIColor blackColor].CGColor];
 
-	DDExpandableButton *colorButton = [[[DDExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 65.0f)
+	CNExpandableButton *colorButton = [[[CNExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 65.0f)
 																	   leftTitle:@"Color"
 																		 buttons:[NSArray arrayWithObjects:@"Black", @"Red", @"Green", @"Blue", nil]] autorelease];
 	[[self view] addSubview:colorButton];
@@ -88,7 +88,7 @@
 	[[colorButton.labels objectAtIndex:2] setHighlightedTextColor:[UIColor greenColor]];
 	[[colorButton.labels objectAtIndex:3] setHighlightedTextColor:[UIColor blueColor]];
 
-	DDExpandableButton *borderButton = [[[DDExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 110.0f)
+	CNExpandableButton *borderButton = [[[CNExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 110.0f)
 																		leftTitle:@"Border"
 																		  buttons:[NSArray arrayWithObjects:@"Thin", @"Medium", @"Thick", nil]] autorelease];
 	[[self view] addSubview:borderButton];
@@ -99,7 +99,7 @@
 	[borderButton updateDisplay];
 	[borderButton setSelectedItem:1];
 
-	DDExpandableButton *toggleButton = [[[DDExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 155.0f)
+	CNExpandableButton *toggleButton = [[[CNExpandableButton alloc] initWithPoint:CGPointMake(20.0f, 155.0f)
 																		leftTitle:nil
 																		  buttons:[NSArray arrayWithObjects:@"HDR On", @"HDR Off", nil]] autorelease];
 	[[self view] addSubview:toggleButton];
@@ -117,7 +117,7 @@
 
 #pragma mark UIControlEventValueChanged selectors
 
-- (void)toggleColor:(DDExpandableButton *)sender
+- (void)toggleColor:(CNExpandableButton *)sender
 {
 	switch ([sender selectedItem])
 	{
@@ -136,7 +136,7 @@
 	}
 }
 
-- (void)toggleWidth:(DDExpandableButton *)sender
+- (void)toggleWidth:(CNExpandableButton *)sender
 {
 	switch ([sender selectedItem])
 	{
@@ -151,7 +151,7 @@
 			break;
 	}
 }
-- (void)toggleBkgd:(DDExpandableButton *)sender
+- (void)toggleBkgd:(CNExpandableButton *)sender
 {
 	switch ([sender selectedItem])
 	{
@@ -164,7 +164,7 @@
 	}
 }
 
-- (void)toggleFlashlight:(DDExpandableButton *)sender
+- (void)toggleFlashlight:(CNExpandableButton *)sender
 {
 	if (NSClassFromString(@"AVCaptureDevice") != nil)
 	{

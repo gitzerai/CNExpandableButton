@@ -16,7 +16,7 @@
 		69BA0C5213E4771700CA7570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BA0C5113E4771700CA7570 /* main.m */; };
 		69BA0C5513E4771700CA7570 /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BA0C5413E4771700CA7570 /* SampleAppDelegate.m */; };
 		69BA0C5B13E4771700CA7570 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BA0C5A13E4771700CA7570 /* SampleViewController.m */; };
-		69BA0C6B13E4773F00CA7570 /* DDExpandableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BA0C6A13E4773F00CA7570 /* DDExpandableButton.m */; };
+		69BA0C6B13E4773F00CA7570 /* CNExpandableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BA0C6A13E4773F00CA7570 /* CNExpandableButton.m */; };
 		69BA0C6E13E477EE00CA7570 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BA0C6D13E477EE00CA7570 /* QuartzCore.framework */; };
 		69BA0C7813E478E000CA7570 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BA0C7713E478E000CA7570 /* AVFoundation.framework */; };
 		69BA0C7C13E4828700CA7570 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69BA0C7A13E4828700CA7570 /* Icon@2x.png */; };
@@ -37,15 +37,15 @@
 		69BA0C4413E4771700CA7570 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		69BA0C4613E4771700CA7570 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		69BA0C4813E4771700CA7570 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		69BA0C4C13E4771700CA7570 /* DDExpandableButtonSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDExpandableButtonSample-Info.plist"; sourceTree = "<group>"; };
-		69BA0C5013E4771700CA7570 /* DDExpandableButtonSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDExpandableButtonSample-Prefix.pch"; sourceTree = "<group>"; };
+		69BA0C4C13E4771700CA7570 /* CNExpandableButtonSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CNExpandableButtonSample-Info.plist"; sourceTree = "<group>"; };
+		69BA0C5013E4771700CA7570 /* CNExpandableButtonSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CNExpandableButtonSample-Prefix.pch"; sourceTree = "<group>"; };
 		69BA0C5113E4771700CA7570 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69BA0C5313E4771700CA7570 /* SampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleAppDelegate.h; sourceTree = "<group>"; };
 		69BA0C5413E4771700CA7570 /* SampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppDelegate.m; sourceTree = "<group>"; };
 		69BA0C5913E4771700CA7570 /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		69BA0C5A13E4771700CA7570 /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
-		69BA0C6913E4773F00CA7570 /* DDExpandableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExpandableButton.h; sourceTree = "<group>"; };
-		69BA0C6A13E4773F00CA7570 /* DDExpandableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExpandableButton.m; sourceTree = "<group>"; };
+		69BA0C6913E4773F00CA7570 /* CNExpandableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNExpandableButton.h; sourceTree = "<group>"; };
+		69BA0C6A13E4773F00CA7570 /* CNExpandableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNExpandableButton.m; sourceTree = "<group>"; };
 		69BA0C6D13E477EE00CA7570 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		69BA0C7713E478E000CA7570 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		69BA0C7A13E4828700CA7570 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 				6929AE5B1769CF34005FF093 /* Default@2x.png */,
 				6929AE5C1769CF34005FF093 /* Default-568h@2x.png */,
 				D0F8C7591757D2A0009D2F98 /* README.md */,
-				69BA0C6813E4773F00CA7570 /* DDExpandableButton */,
-				69BA0C4A13E4771700CA7570 /* DDExpandableButtonSample */,
+				69BA0C6813E4773F00CA7570 /* CNExpandableButton */,
+				69BA0C4A13E4771700CA7570 /* CNExpandableButtonSample */,
 				69BA0C4313E4771700CA7570 /* Frameworks */,
 				69BA0C4113E4771700CA7570 /* Products */,
 			);
@@ -108,7 +108,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		69BA0C4A13E4771700CA7570 /* DDExpandableButtonSample */ = {
+		69BA0C4A13E4771700CA7570 /* CNExpandableButtonSample */ = {
 			isa = PBXGroup;
 			children = (
 				69BA0CB013E5DCEB00CA7570 /* MainWindow.xib */,
@@ -119,7 +119,7 @@
 				69BA0C5A13E4771700CA7570 /* SampleViewController.m */,
 				69BA0C4B13E4771700CA7570 /* Supporting Files */,
 			);
-			path = DDExpandableButtonSample;
+			path = CNExpandableButtonSample;
 			sourceTree = "<group>";
 		};
 		69BA0C4B13E4771700CA7570 /* Supporting Files */ = {
@@ -130,20 +130,20 @@
 				69BA0C7B13E4828700CA7570 /* Icon.png */,
 				69BA0C8213E4B7FE00CA7570 /* Icon-72.png */,
 				69BA0C7A13E4828700CA7570 /* Icon@2x.png */,
-				69BA0C4C13E4771700CA7570 /* DDExpandableButtonSample-Info.plist */,
-				69BA0C5013E4771700CA7570 /* DDExpandableButtonSample-Prefix.pch */,
+				69BA0C4C13E4771700CA7570 /* CNExpandableButtonSample-Info.plist */,
+				69BA0C5013E4771700CA7570 /* CNExpandableButtonSample-Prefix.pch */,
 				69BA0C5113E4771700CA7570 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		69BA0C6813E4773F00CA7570 /* DDExpandableButton */ = {
+		69BA0C6813E4773F00CA7570 /* CNExpandableButton */ = {
 			isa = PBXGroup;
 			children = (
-				69BA0C6913E4773F00CA7570 /* DDExpandableButton.h */,
-				69BA0C6A13E4773F00CA7570 /* DDExpandableButton.m */,
+				69BA0C6913E4773F00CA7570 /* CNExpandableButton.h */,
+				69BA0C6A13E4773F00CA7570 /* CNExpandableButton.m */,
 			);
-			path = DDExpandableButton;
+			path = CNExpandableButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +162,7 @@
 			dependencies = (
 			);
 			name = DDExpButton;
-			productName = DDExpandableButtonSample;
+			productName = CNExpandableButtonSample;
 			productReference = 69BA0C4013E4771700CA7570 /* DDExpButton.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -175,7 +175,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = SmartApps;
 			};
-			buildConfigurationList = 69BA0C3A13E4771700CA7570 /* Build configuration list for PBXProject "DDExpandableButtonSample" */;
+			buildConfigurationList = 69BA0C3A13E4771700CA7570 /* Build configuration list for PBXProject "CNExpandableButtonSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,7 +221,7 @@
 				69BA0C5213E4771700CA7570 /* main.m in Sources */,
 				69BA0C5513E4771700CA7570 /* SampleAppDelegate.m in Sources */,
 				69BA0C5B13E4771700CA7570 /* SampleViewController.m in Sources */,
-				69BA0C6B13E4773F00CA7570 /* DDExpandableButton.m in Sources */,
+				69BA0C6B13E4773F00CA7570 /* CNExpandableButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +284,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DDExpandableButtonSample/DDExpandableButtonSample-Prefix.pch";
-				INFOPLIST_FILE = "DDExpandableButtonSample/DDExpandableButtonSample-Info.plist";
+				GCC_PREFIX_HEADER = "CNExpandableButtonSample/CNExpandableButtonSample-Prefix.pch";
+				INFOPLIST_FILE = "CNExpandableButtonSample/CNExpandableButtonSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -294,8 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DDExpandableButtonSample/DDExpandableButtonSample-Prefix.pch";
-				INFOPLIST_FILE = "DDExpandableButtonSample/DDExpandableButtonSample-Info.plist";
+				GCC_PREFIX_HEADER = "CNExpandableButtonSample/CNExpandableButtonSample-Prefix.pch";
+				INFOPLIST_FILE = "CNExpandableButtonSample/CNExpandableButtonSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -304,7 +304,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69BA0C3A13E4771700CA7570 /* Build configuration list for PBXProject "DDExpandableButtonSample" */ = {
+		69BA0C3A13E4771700CA7570 /* Build configuration list for PBXProject "CNExpandableButtonSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69BA0C5F13E4771700CA7570 /* Debug */,

@@ -1,6 +1,6 @@
 //
-//	DDExpandableButton.m
-//	https://github.com/ddebin/DDExpandableButton
+//	CNExpandableButton.m
+//	https://github.com/gitzerai/CNExpandableButton
 //
 
 
@@ -40,17 +40,17 @@
 
 #import <QuartzCore/CALayer.h>
 #import <tgmath.h>
-#import "DDExpandableButton.h"
+#import "CNExpandableButton.h"
 
 
 #pragma mark - Custom UIImageView Class
 
 
-@interface DDExpandableButtonCustomUILabel : UILabel <DDExpandableButtonViewSource>
+@interface CNExpandableButtonCustomUILabel : UILabel <CNExpandableButtonViewSource>
 
 @end
 
-@implementation DDExpandableButtonCustomUILabel
+@implementation CNExpandableButtonCustomUILabel
 
 - (CGSize)defaultFrameSize
 {
@@ -63,11 +63,11 @@
 #pragma mark - Custom UILabel Class
 
 
-@interface DDExpandableButtonCustomUIImageView : UIImageView <DDExpandableButtonViewSource>
+@interface CNExpandableButtonCustomUIImageView : UIImageView <CNExpandableButtonViewSource>
 
 @end
 
-@implementation DDExpandableButtonCustomUIImageView
+@implementation CNExpandableButtonCustomUIImageView
 
 - (CGSize)defaultFrameSize
 {
@@ -77,10 +77,10 @@
 @end
 
 
-#pragma mark - DDExpandableButton Class
+#pragma mark - CNExpandableButton Class
 
 
-@interface DDExpandableButton (private)
+@interface CNExpandableButton (private)
 
 - (CGRect)currentFrameRect;
 - (CGRect)shrunkFrameRect;
@@ -90,7 +90,7 @@
 @end
 
 
-@implementation DDExpandableButton
+@implementation CNExpandableButton
 
 @synthesize selectedItem;
 @synthesize expanded;
@@ -339,8 +339,8 @@
 		{
 			if (i != selectedItem)
 			{
-				if ([v isKindOfClass:[DDExpandableButtonCustomUILabel class]]) {
-					[(DDExpandableButtonCustomUILabel *)v setFont:((unSelectedLabelFont != nil)?unSelectedLabelFont:labelFont)];
+				if ([v isKindOfClass:[CNExpandableButtonCustomUILabel class]]) {
+					[(CNExpandableButtonCustomUILabel *)v setFont:((unSelectedLabelFont != nil)?unSelectedLabelFont:labelFont)];
 				}
 				if ([v respondsToSelector:@selector(setHighlighted:)]) {
 					[v setHighlighted:NO];
@@ -350,8 +350,8 @@
 				if ([v respondsToSelector:@selector(setHighlighted:)]) {
 				  [v setHighlighted:YES];
 				}
-				if ([v isKindOfClass:[DDExpandableButtonCustomUILabel class]]) {
-					[(DDExpandableButtonCustomUILabel *)v setTextColor:self.selectedTextColor];
+				if ([v isKindOfClass:[CNExpandableButtonCustomUILabel class]]) {
+					[(CNExpandableButtonCustomUILabel *)v setTextColor:self.selectedTextColor];
 				}
 			}
 
@@ -381,10 +381,10 @@
 		CGFloat selectedWidth = 0;
 		for (DDView *v in labels)
 		{
-			if ([v isKindOfClass:[DDExpandableButtonCustomUILabel class]])
+			if ([v isKindOfClass:[CNExpandableButtonCustomUILabel class]])
 			{
-				[(DDExpandableButtonCustomUILabel *)v setFont:labelFont];
-				[(DDExpandableButtonCustomUILabel *)v setTextColor:textColor];
+				[(CNExpandableButtonCustomUILabel *)v setFont:labelFont];
+				[(CNExpandableButtonCustomUILabel *)v setTextColor:textColor];
 			}
 			if ([v respondsToSelector:@selector(setHighlighted:)])
 			{
@@ -499,7 +499,7 @@
 {
 	if ([obj isKindOfClass:[NSString class]])
 	{
-		DDExpandableButtonCustomUILabel *v = [[DDExpandableButtonCustomUILabel alloc] init];
+		CNExpandableButtonCustomUILabel *v = [[CNExpandableButtonCustomUILabel alloc] init];
 		v.font = labelFont;
 		v.textColor = textColor;
 		v.backgroundColor = [UIColor clearColor];
@@ -510,7 +510,7 @@
 	}
 	else if ([obj isKindOfClass:[UIImage class]])
 	{
-		DDExpandableButtonCustomUIImageView *v = [[DDExpandableButtonCustomUIImageView alloc] initWithImage:obj];
+		CNExpandableButtonCustomUIImageView *v = [[CNExpandableButtonCustomUIImageView alloc] initWithImage:obj];
 		v.backgroundColor = [UIColor clearColor];
 		v.opaque = YES;
 		v.contentMode = UIViewContentModeCenter;
@@ -524,7 +524,7 @@
 	else
 	{
 		NSAssert([obj isKindOfClass:[UIView class]], @"obj must be an UIView class !");
-		NSAssert([obj conformsToProtocol:@protocol(DDExpandableButtonViewSource)], @"obj must implement protocol DDExpandableButtonViewSource !");
+		NSAssert([obj conformsToProtocol:@protocol(CNExpandableButtonViewSource)], @"obj must implement protocol CNExpandableButtonViewSource !");
 		return obj;
 	}
 }

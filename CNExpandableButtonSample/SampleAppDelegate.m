@@ -1,6 +1,6 @@
 //
 //	SampleAppDelegate.m
-//	DDExpandableButtonSample
+//	CNExpandableButtonSample
 //
 
 #import "SampleAppDelegate.h"
